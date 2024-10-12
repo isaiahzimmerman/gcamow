@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer for GCAMOW</title>
+    <script src="/assets/header.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/assets/header.css">
+</head>
+<body class="desktop" onload="document.gcamow = {site: 'volunteer'}; runOnLoad()">
+    <!-- header -->
+    <div w3-include-html="/assets/header.html"></div>
+    <script>includeHTML()</script>
+    <!-- header -->
+    <div class="site_body section_heading" id="contact">Contact</div>
+        <div class="site_body">
+            
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="597ae02c-a38a-42cc-80b6-abd94e0cd6bd">
+
+                    <div class="contact_form">
+                        <!-- Form Inputs. Each input must have a name="" attribute -->
+                        <div class="contact_form_column">
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label"  for="name">Name</label>
+                                <input type="text" class="contact_form_item_input" name="name" required>
+                            </div>
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label"  for="email">Email</label>
+                                <input type="email" class="contact_form_item_input" name="email" required>
+                            </div>
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label"  for="phone">Phone</label>
+                                <input type="tel" class="contact_form_item_input" name="phone" required>
+                            </div>
+                            <!-- <div class="contact_form_item">
+                                <label for="address">Address</label>
+                                <textarea name="address" class="contact_form_address" required></textarea>
+                            </div> -->
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label"  for="message">Message</label>
+                                <textarea name="message" class="contact_form_message_notes contact_form_item_input" required></textarea>
+                            </div>
+                        </div>
+                        <div class="contact_form_column">
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label">Volunteer Type</label>
+                                <div class="volunteer_type_checkbox_container">
+                                    <label class="volunteer_type_label" for="driver">Driver</label>
+                                    <input class="" type="checkbox" name="driver" id="">
+                                </div>
+                                <div class="volunteer_type_checkbox_container">
+                                    <label class="volunteer_type_label" for="cook">Cook</label>
+                                    <input class="" type="checkbox" name="cook" id="">
+                                </div>
+                                <div class="volunteer_type_checkbox_container">
+                                    <label class="volunteer_type_label" for="packer">Packer</label>
+                                    <input class="" type="checkbox" name="packer" id="">
+                                </div>
+                                <div class="volunteer_type_checkbox_container">
+                                    <label class="volunteer_type_label" for="administrator">Administrator</label>
+                                    <input class="" type="checkbox" name="administrator" id="">
+                                </div>
+                            </div>
+                            
+                            <!-- Honeypot Spam Protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                            <!-- Custom Confirmation / Success Page -->
+                            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                        
+                            <button type="submit" class="submit_button">Submit</button>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+        </div>
+</body>
+</html>

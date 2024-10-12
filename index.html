@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grove City Area Meals on Wheels</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/header.css">
+    <link rel="stylesheet" href="/testimonials.css">
+    <link rel="stylesheet" href="action_button.css">
+    <link rel="stylesheet" href="donate.css">
+    <script src="main.js"></script>
+    <script src="/assets/header.js"></script>
+</head>
+<body class="desktop" onload="document.gcamow = {site: 'home'}; runOnLoad()">
+    <!-- header -->
+    <div w3-include-html="/assets/header.html"></div>
+    <script>includeHTML()</script>
+    <!-- header -->
+    <!-- <div class="nav_container">
+
+    </div>
+    <div class="desktop_nav_bar">
+        <div class="desktop_nav_logo">
+            <a href=""><img src="/assets/logo.png" alt=""></a>
+        </div>
+        <div class="desktop_nav_elements">
+            <div class="desktop_nav_element" onclick='scrollSite("about")'>About</div>
+            <div class="desktop_nav_element" onclick='scrollSite("contact")'>Contact</div>
+            <div class="desktop_nav_element">Donate</div>
+            <div class="desktop_nav_element">Volunteer</div>
+            <div class="desktop_nav_element">Payment</div>
+        </div>
+    </div>
+    <div class="desktop_nav_spacing" id="desktop_nav_spacing"></div>
+    <div class="mobile_nav_buttons" >
+        <div class="header_full_container">
+            
+            <div class="header_container" id="header_container">
+                <div class="header_element">
+                    <a href="/">Home</a>
+                </div>
+                <div class="header_element">
+                    <a href="/about/">About</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile_nav_button header_reveal_container">
+            <div class="header_reveal_button" id="header_reveal_button" onclick="header_reveal_menu()">
+                <div class="header_menu_line header_menu_line1" id="header_menu_line1"></div>
+                <div class="header_menu_line header_menu_line2" id="header_menu_line2"></div>
+                <div class="header_menu_line header_menu_line3" id="header_menu_line3"></div>
+            </div>
+        </div>
+        <div class="mobile_nav_button">
+            <img src="assets/logo.png" alt="" class="mobile_logo">
+        </div>
+    </div>
+    <div class="mobile_nav_spacing" ></div>
+    <div class="mobile_nav_list" id="mobile_nav_list">
+        <div onclick="hideMobileNavList()">hide list</div>
+        <div><a href="#about">About</a></div>
+        <div>Contact</div>
+        <div>Donate</div>
+    </div> -->
+    <div class="top_image">
+        <img src="assets/Mayor Randy Riddle.jpg" alt="">
+        <div class="business_title">
+            <div class="business_title_gca">Grove City Area</div>
+            <div class="business_title_mow">Meals on Wheels</div>
+        </div>
+    </div>
+    <div class="photo_scroll">
+        
+    </div>
+    <!-- <div class="site_body"> -->
+        <div class="spacing"></div>
+        <div class="site_body">
+            <div class="section_heading center_text">Nutritious, convinient meals - delivered to your door!</div>
+            <div></div>
+            <div class="hero_button_container">
+                <div class="primary_action_button" onclick="scrollSite('contact')">Contact Us</div>
+                <div class="secondary_action_button" onclick="scrollSite('about')">Keep Reading</div>
+            </div>
+        </div>
+        <div class="spacing"></div>
+        <div class="site_body section_heading" id="about">
+            <!-- About -->
+        </div>
+        <div class="site_body section_about">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fuga necessitatibus rerum aspernatur dolorem ullam autem adipisci, magni voluptatem, recusandae excepturi dicta minus optio reiciendis id fugiat possimus doloribus placeat.</p>
+            <div>
+                <img src="assets/meal_bags_.jpg" class="fit_image" alt="">
+            </div>
+        </div>
+        <div class="spacing"></div>
+        <div class="site_body section_heading" id="contact">Contact</div>
+        <div class="site_body">
+            
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="597ae02c-a38a-42cc-80b6-abd94e0cd6bd">
+
+                    <div class="contact_form">
+                        <!-- Form Inputs. Each input must have a name="" attribute -->
+                        <div class="contact_form_column">
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label" for="name">Name</label>
+                                <input class="contact_form_item_input" type="text" name="name" required>
+                            </div>
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label"  for="email">Email</label>
+                                <input class="contact_form_item_input" type="email" name="email" required>
+                            </div>
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label"  for="phone">Phone</label>
+                                <input class="contact_form_item_input" type="tel" name="phone" required>
+                            </div>
+                            <div class="contact_form_item">
+                                <label  class="contact_form_item_label" for="address">Address</label>
+                                <textarea name="address" class="contact_form_address contact_form_item_input" required></textarea>
+                            </div>
+                        </div>
+                        <div class="contact_form_column">
+                            <div class="contact_form_item">
+                                <label class="contact_form_item_label"  for="message">Message</label>
+                                <textarea name="message" class="contact_form_message_notes contact_form_item_input" required></textarea>
+                            </div>
+                            <!-- Honeypot Spam Protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                            <!-- Custom Confirmation / Success Page -->
+                            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                        
+                            <button type="submit" class="submit_button">Submit</button>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+        </div>
+        <div class="spacing"></div>
+        <div class="site_body section_heading" id="donate">
+            Donate
+        </div>
+        <div class="site_body donation_container">
+            <div class="donation_presets">
+                <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=9587efb49416c2921f184e" target="HelcimPaymentPage">
+                    <input type="hidden" name="amount" value="5.00">
+                    <input type="submit" name="submit" value="$5" class="donation_preset primary_action_button">
+                </form>
+                <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=9587efb49416c2921f184e" target="HelcimPaymentPage">
+                    <input type="hidden" name="amount" value="10.00">
+                    <input type="submit" name="submit" value="$10" class="donation_preset primary_action_button">
+                </form>
+                <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=9587efb49416c2921f184e" target="HelcimPaymentPage">
+                    <input type="hidden" name="amount" value="20.00">
+                    <input type="submit" name="submit" value="$20" class="donation_preset primary_action_button">
+                </form>
+                <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=9587efb49416c2921f184e" target="HelcimPaymentPage">
+                    <input type="hidden" name="amount" value="50.00">
+                    <input type="submit" name="submit" value="$50" class="donation_preset primary_action_button">
+                </form>
+                <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=9587efb49416c2921f184e" target="HelcimPaymentPage">
+                    <input type="hidden" name="amount" value="100.00">
+                    <input type="submit" name="submit" value="$100" class="donation_preset primary_action_button">
+                </form>
+                <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=9587efb49416c2921f184e" target="HelcimPaymentPage">
+                    <input type="hidden" name="amount" value="0">
+                    <input type="submit" name="submit" value="Custom" class="donation_preset primary_action_button">
+                </form>
+            </div>
+            <div class="donation_description">
+                Grove City Area Meals on Wheels is only able to provide meals to the disabled and elderly population of our area with your support. Thank you!
+            </div>
+        </div>
+        <div class="spacing"></div>
+        <div class="site_body">Add map here?</div>
+        <div class="spacing"></div>
+        <div class="site_body testimonials">
+            <div class="testimonial_container">
+                <div class="testimonial_message">"I love the food"</div>
+                <div>
+                    <!-- <div class="testimonial_image">
+                        <img src="assets/holy_trinity.jpg" alt="">
+                    </div> -->
+                    <div class="testimonial_person">- Isaiah Z.</div>
+                </div>
+            </div>
+            <div class="testimonial_container">
+                <div class="testimonial_message">"The people are so kind!"</div>
+                <div>
+                    <!-- <div class="testimonial_image">
+                        <img src="assets/holy_trinity.jpg" alt="">
+                    </div> -->
+                    <div class="testimonial_person">- Wanda F.</div>
+                </div>
+            </div>
+            <div class="testimonial_container">
+                <div class="testimonial_message">"Unmatched Service."</div>
+                <div>
+                    <!-- <div class="testimonial_image">
+                        <img src="assets/holy_trinity.jpg" alt="">
+                    </div> -->
+                    <div class="testimonial_person">- Emma O.</div>
+                </div>
+            </div>
+        </div>
+        <div class="spacing"></div>
+        <!-- <div>Sponsors</div> -->
+        <div class="sponsors site_body">
+            <div>
+                <img src="assets/united_way.jpg" alt="">
+            </div>
+            <!-- <div>
+                <img src="assets/giant_eagle.png" alt="">
+            </div> -->
+            <div>
+                <img src="assets/holy_trinity.jpg" alt="">
+                <!-- Holy -->
+            </div>
+        </div>
+        <div class="spacing"></div>
+    <!-- </div> -->
+</body>
+</html>

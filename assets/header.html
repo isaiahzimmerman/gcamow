@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="/assets/header.js"></script>
+    <div class="nav_container">
+
+    </div>
+    <div class="desktop_nav_bar">
+        <div class="desktop_nav_logo">
+            <a href="/"><img src="/assets/logo.png" alt=""></a>
+        </div>
+        <div class="desktop_nav_elements">
+            <div class="desktop_nav_element" onclick='goToSite("about")'>About</div>
+            <div class="desktop_nav_element" onclick='goToSite("contact")'>Contact</div>
+            <div class="desktop_nav_element" onclick="goToSite('donate')">Donate</div>
+            <div class="desktop_nav_element" onclick="goToSite('volunteer')">Volunteer</div>
+            <div class="desktop_nav_element" onclick="goToSite('payment')">Payment</div>
+        </div>
+    </div>
+    <div class="desktop_nav_spacing" id="desktop_nav_spacing"></div>
+    <div class="mobile_nav_buttons" >
+        <!-- <div class="header_full_container">
+            
+            <div class="header_container" id="header_container">
+                <div class="header_element">
+                    <a href="/">Home</a>
+                </div>
+                <div class="header_element">
+                    <a href="/about/">About</a>
+                </div>
+            </div>
+        </div> -->
+        <div class="mobile_nav_button header_reveal_container">
+            <div class="header_reveal_button" id="header_reveal_button" onclick="header_reveal_menu()">
+                <div class="header_menu_line header_menu_line1" id="header_menu_line1"></div>
+                <div class="header_menu_line header_menu_line2" id="header_menu_line2"></div>
+                <div class="header_menu_line header_menu_line3" id="header_menu_line3"></div>
+            </div>
+        </div>
+        <div class="mobile_nav_button">
+            <a href="/">
+                <img src="/assets/logo.png" alt="" class="mobile_logo">
+            </a>
+        </div>
+    </div>
+    <div class="mobile_nav_spacing" id="mobile_nav_spacing"></div>
+    <div class="mobile_nav_list" id="mobile_nav_list">
+        <div onclick="goToSite('about')">About</div>
+        <div onclick="goToSite('contact')">Contact</div>
+        <div onclick="goToSite('donate')">Donate</div>
+        <div onclick="goToSite('volunteer')">Volunteer</div>
+
+    </div>
+</body>

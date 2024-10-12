@@ -1,0 +1,44 @@
+/* Main container to wrap the scrolling content */
+.scroll-container {
+    width: 100%;                 /* Full width container */
+    overflow: hidden;            /* Hide overflowed content */
+    white-space: nowrap;         /* Prevent line breaks, so content stays inline */
+    position: relative;          /* Position for relative control */
+    background: #f0f0f0;
+}
+  
+/* Content container that will be animated */
+.scroll-content {
+    display: inline-block;
+    white-space: nowrap;         /* No line breaks */
+    animation: scroll 10s linear infinite; /* Define scrolling animation */
+}
+  
+/* Individual boxes that scroll */
+.box {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    /* margin-right: 10px; */
+    background-color: #3498db;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+}
+  
+/* Keyframes for the scrolling effect */
+@keyframes scroll {
+0% {
+    transform: translateX(100%); /* Start outside the container (to the right) */
+}
+100% {
+    transform: translateX(-100%); /* End outside the container (to the left) */
+}
+}
+  
+/* Pausing the animation on hover */
+.scroll-container:hover .scroll-content {
+    animation-play-state: paused; /* Stop animation when hovered */
+}
+  
