@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="/testimonials.css">
     <link rel="stylesheet" href="action_button.css">
     <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="image_viewer.css">
     <script src="main.js"></script>
+    <script src="image_viewer.js"></script>
     <script src="/assets/header.js"></script>
 </head>
 <body class="desktop" onload="document.gcamow = {site: 'home'}; runOnLoad()">
@@ -89,8 +92,21 @@
         </div>
         <div class="site_body section_about">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fuga necessitatibus rerum aspernatur dolorem ullam autem adipisci, magni voluptatem, recusandae excepturi dicta minus optio reiciendis id fugiat possimus doloribus placeat.</p>
-            <div>
+            <div class="about_image_container" >
                 <img src="assets/meal_bags_.jpg" class="fit_image" alt="">
+                <div class="about_view_more_images" onclick="showImageViewer()">
+                    view more images
+                </div>
+            </div>
+        </div>
+        <div id="image_viewer_bg" class="image_viewer_bg" onclick="hideImageViewer()"></div>
+        <div id="image_viewer" class="image_viewer">
+            <div class="image_viewer_container">
+                <div class="image_viewer_nav_button" onclick="imageViewerScroll('left')"></div>
+                <div class="image_viewer_image">
+                    <img id="image_viewer_image_img" src="assets/promotional_images/00.jpg" alt="">
+                </div>
+                <div class="image_viewer_nav_button" onclick="imageViewerScroll('right')"></div>
             </div>
         </div>
         <div class="spacing"></div>
@@ -179,31 +195,45 @@
         <div class="site_body">Add map here?</div>
         <div class="spacing"></div>
         <div class="site_body testimonials">
-            <div class="testimonial_container">
-                <div class="testimonial_message">"I love the food"</div>
-                <div>
-                    <!-- <div class="testimonial_image">
-                        <img src="assets/holy_trinity.jpg" alt="">
-                    </div> -->
-                    <div class="testimonial_person">- Isaiah Z.</div>
+            <div class="testimonial_container_outer">
+                <div class="testimonial_stack testimonial_stack_2"></div>
+                <div class="testimonial_stack testimonial_stack_1"></div>
+                <div class="testimonial_container">
+                    <div class="testimonial_message">“They [the volunteers] always have a smile and ask how I am”</div>
+                    <div>
+                        <!-- <div class="testimonial_image">
+                            <img src="assets/holy_trinity.jpg" alt="">
+                        </div> -->
+                        <div class="testimonial_person">- Esther H.</div>
+                    </div>
                 </div>
             </div>
-            <div class="testimonial_container">
-                <div class="testimonial_message">"The people are so kind!"</div>
-                <div>
-                    <!-- <div class="testimonial_image">
-                        <img src="assets/holy_trinity.jpg" alt="">
-                    </div> -->
-                    <div class="testimonial_person">- Wanda F.</div>
+            
+            <div class="testimonial_container_outer">
+                <div class="testimonial_stack testimonial_stack_2"></div>
+                <div class="testimonial_stack testimonial_stack_1"></div>
+                <div class="testimonial_container">
+                    <div class="testimonial_message">The food is very good. I love the roast beef sandwiches and the lasagna.</div>
+                    <div>
+                        <!-- <div class="testimonial_image">
+                            <img src="assets/holy_trinity.jpg" alt="">
+                        </div> -->
+                        <div class="testimonial_person">- Ida L.</div>
+                    </div>
                 </div>
             </div>
-            <div class="testimonial_container">
-                <div class="testimonial_message">"Unmatched Service."</div>
-                <div>
-                    <!-- <div class="testimonial_image">
-                        <img src="assets/holy_trinity.jpg" alt="">
-                    </div> -->
-                    <div class="testimonial_person">- Emma O.</div>
+            <div class="testimonial_container_outer">
+                <div class="testimonial_stack testimonial_stack_2"></div>
+                <div class="testimonial_stack testimonial_stack_1"></div>
+                
+                <div class="testimonial_container">
+                    <div class="testimonial_message">The food is always delivered on a timely and predictable schedule.</div>
+                    <div>
+                        <!-- <div class="testimonial_image">
+                            <img src="assets/holy_trinity.jpg" alt="">
+                        </div> -->
+                        <div class="testimonial_person">- Kathy & Larry H.</div>
+                    </div>
                 </div>
             </div>
         </div>

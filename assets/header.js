@@ -108,6 +108,7 @@ function goToSite(id){
   console.log(id)
   if(sites[document.gcamow.site].indexOf(id) >= 0){
     scrollSite(id)
+    //TODO: undefined
   }else{
     siteToLink = ""
     links.forEach(element => {

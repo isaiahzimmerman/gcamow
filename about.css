@@ -1,0 +1,25 @@
+.about_image_container{
+    position: relative;
+    cursor: pointer;
+}
+
+.about_view_more_images{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    color: white;
+    font-size: 2rem;
+    transition: opacity 0.25s;
+}
+
+.about_image_container:hover .about_view_more_images{
+    opacity: 1;
+}

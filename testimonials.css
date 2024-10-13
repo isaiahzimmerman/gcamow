@@ -14,16 +14,29 @@
 
 
 .testimonial_container{
-    background-color: antiquewhite;
+    background-color: #e6c498;
     width: 100%;
-    padding: 10px;
+    height: 100%;
+    /* padding: 10px; */
     /* margin: 10px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: rotate 0.3s;
 }
 
-.mobile .testimonial_container{
+.testimonial_stack_1{
+    background-color: #d29446;
+}
+
+.testimonial_stack_2{
+    background-color: #b97b2d;
+}
+
+.testimonial_stack_container{
+}
+
+.mobile .testimonial_container, .mobile .testimonial_stack{
     max-width: calc(100% - 20px);
 }
 
@@ -36,10 +49,13 @@
 }
 
 .testimonial_message{
+    padding: 10px;
+    padding-bottom: 0;
     font-size: 1.5rem;
 }
 
 .testimonial_person{
+    padding: 10px;
     color: gray;
 }
 
@@ -52,4 +68,31 @@
 .testimonial_image img{
     width: 100%;
     height: 100%;
+}
+
+.testimonial_container_outer{
+    position: relative;
+    cursor: default;
+}
+
+.testimonial_stack{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: rotate 0.3s;
+}
+
+.testimonial_container_outer:hover .testimonial_container{
+    rotate: -6deg;
+}
+/* 
+.testimonial_container_outer:hover .testimonial_stack_1{
+    rotate: 0deg;
+} */
+
+.testimonial_container_outer:hover .testimonial_stack_2{
+    rotate: 6deg;
 }
