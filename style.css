@@ -6,8 +6,8 @@
 
 body{
     margin: 0;
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
     font-style: normal;
     color: var(--theme-black);
 }
@@ -46,14 +46,20 @@ body{
 .desktop_nav_element{
     width: 10rem;
     /* max-width: 100%; */
-    border: 3px solid black;
+    border: 3px solid white;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
     font-size: 1.25rem;
     margin: 0.5rem;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.desktop_nav_element:hover{
+    background-color: gray;
+    color: lightgray;
 }
 
 .desktop_nav_logo{
@@ -66,7 +72,7 @@ body{
 }
 
 .desktop_nav_element:not(:last-child){
-    text-decoration: underline;
+    /* text-decoration: underline; */
     /* border-right: 10px solid black; */
 }
 
@@ -116,7 +122,6 @@ body{
     width: 100%;
     object-fit: contain;
 }
-
 
 
 .site_body{
@@ -195,7 +200,8 @@ body{
 }
 
 .business_title div{
-    background-color: #EEDF7A;
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white;
     padding: 0.5rem;
     width: fit-content;
 }
@@ -217,6 +223,7 @@ body{
 .section_heading{
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 p{
@@ -287,7 +294,16 @@ p{
     width: 80%;
     border: 1.5px solid black;
     border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--theme-red);
+    color: white;
+    border: 0;
+    transition: background-color 0.25s, color 0.25s;
+}
 
+.submit_button:hover{
+    background-color: gray;
+    color: lightgray;
 }
 
 .contact_form_item_input{
@@ -296,6 +312,8 @@ p{
     padding: 5px;
     border: 1.5px solid black;
     border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    border-color: var(--theme-black);
 }
 
 .desktop .top_image{
