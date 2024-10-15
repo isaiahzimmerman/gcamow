@@ -1,12 +1,13 @@
 :root{
     --theme-black: #343131;
-    --theme-red: #A04747;
-    --theme-yellow: #EEDF7A;
+    --theme-red: #742414;
+    --theme-yellow: #ffc404;
 }
 
 body{
     margin: 0;
     font-family: "Inter", sans-serif;
+    /* font-family: ; */
     font-weight: 400;
     font-style: normal;
     color: var(--theme-black);
@@ -19,7 +20,7 @@ body{
     padding: 0.75rem 5%;
     justify-content: space-between;
     position: fixed;
-    background-color: white;
+    background-color: var(--theme-yellow);
     z-index: 2;
 }
 
@@ -40,13 +41,13 @@ body{
     /* background-color: aqua; */
     display: flex;
     justify-content: center;
-
 }
 
 .desktop_nav_element{
     width: 10rem;
     /* max-width: 100%; */
-    border: 3px solid white;
+    background-color: white;
+    border: 3px solid transparent;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -54,12 +55,14 @@ body{
     font-size: 1.25rem;
     margin: 0.5rem;
     border-radius: 10px;
-    transition: background-color 0.25s, color 0.25s;
+    transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+    background-color: var(--theme-yellow);
+    color: var(--theme-red);
 }
 
 .desktop_nav_element:hover{
-    background-color: gray;
-    color: lightgray;
+    background-color: var(--theme-red);
+    color: var(--theme-yellow);
 }
 
 .desktop_nav_logo{
@@ -197,6 +200,7 @@ body{
     position: absolute;
     bottom: 2rem;
     left: 2rem;
+    /* font-weight: 400; */
 }
 
 .business_title div{
