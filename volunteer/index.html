@@ -6,13 +6,35 @@
     <title>Volunteer for GCAMOW</title>
     <script src="/assets/header.js"></script>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/volunteer/volunteer.css">
     <link rel="stylesheet" href="/assets/header.css">
 </head>
-<body class="desktop" onload="document.gcamow = {site: 'volunteer'}; runOnLoad()">
+<body class="desktop" onload="document.gcamow = {site: 'volunteer'};">
     <!-- header -->
     <div w3-include-html="/assets/header.html"></div>
     <script>includeHTML()</script>
     <!-- header -->
+    <div class="spacing"></div>
+    <div class="site_body section_heading">Volunteer for GCAMOW!</div>
+    <div class="site_body">
+        <p>
+            Without volunteers, Meals on Wheels would not exist. Volunteers can help once a week, once a month, or once in a while.
+        </p>
+        <p>
+            Our meals are delivered exclusively by volunteers. Monday through Friday, loyal volunteers arrive by 10:45am, collect and deliver the meals on an identified delivery route. It usually takes about an hour to deliver.
+        </p>
+    </div>
+    <div class="site_body volunteer_types">
+        <div class="volunteer_type">
+            <div class="volunteer_name">Drivers</div>
+            <div class="volunteer_description">Volunteer Drivers can work by themselves or in a team of two. Volunteers must have a valid license and insurance, use their own cars to deliver meals, and must clear a state police background check. Volunteers deliver more than a meal, but also a smile and a conversation.</div>
+        </div>
+        <div class="volunteer_type">
+            <div class="volunteer_name">Packers</div>
+            <div class="volunteer_description">Volunteer Packers work in the kitchen 9am-10:30am. Volunteers make sandwiches, pour juice, spoon food into the individual containers, and bag all the items for each individual client.</div>
+        </div>
+    </div>
+    <div class="spacing"></div>
     <div class="site_body section_heading" id="contact">Contact</div>
         <div class="site_body">
             
@@ -47,23 +69,35 @@
                         </div>
                         <div class="contact_form_column">
                             <div class="contact_form_item">
-                                <label class="contact_form_item_label">Volunteer Type</label>
+                                <label class="contact_form_item_label">Interested in</label>
                                 <div class="volunteer_type_checkbox_container">
-                                    <label class="volunteer_type_label" for="driver">Driver</label>
-                                    <input class="" type="checkbox" name="driver" id="">
+                                    <label class="volunteer_type_label" for="driver">Driving</label>
+                                    
+                                    <span class="custom_checkbox">
+                                        <input class="volunteer_type_checkbox" type="checkbox" name="driver" id="">
+                                        <span class="custom_checkmark">
+                                            <img class="custom_checkmark_img" src="/assets/check.svg" alt="">
+                                        </span>
+                                    </span>
                                 </div>
-                                <div class="volunteer_type_checkbox_container">
+                                <!-- <div class="volunteer_type_checkbox_container">
                                     <label class="volunteer_type_label" for="cook">Cook</label>
-                                    <input class="" type="checkbox" name="cook" id="">
-                                </div>
+                                    <input class="volunteer_type_checkbox" type="checkbox" name="cook" id="">
+                                </div> -->
                                 <div class="volunteer_type_checkbox_container">
-                                    <label class="volunteer_type_label" for="packer">Packer</label>
-                                    <input class="" type="checkbox" name="packer" id="">
+                                    <label class="volunteer_type_label" for="packer">Packing</label>
+                                    
+                                    <span class="custom_checkbox">
+                                        <input class="volunteer_type_checkbox" type="checkbox" name="packer" id="">
+                                        <span class="custom_checkmark">
+                                            <img class="custom_checkmark_img" src="/assets/check.svg" alt="">
+                                        </span>
+                                    </span>
                                 </div>
-                                <div class="volunteer_type_checkbox_container">
+                                <!-- <div class="volunteer_type_checkbox_container">
                                     <label class="volunteer_type_label" for="administrator">Administrator</label>
-                                    <input class="" type="checkbox" name="administrator" id="">
-                                </div>
+                                    <input class="volunteer_type_checkbox" type="checkbox" name="administrator" id="">
+                                </div> -->
                             </div>
                             
                             <!-- Honeypot Spam Protection -->

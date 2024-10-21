@@ -20,6 +20,15 @@
     transition: opacity 0.25s;
 }
 
+#about_image{
+    min-height: 100%;
+}
+
+.mobile .about_view_more_images, .mobile #about_image{
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+
 .about_image_container:hover .about_view_more_images{
     opacity: 1;
 }

@@ -15,7 +15,7 @@
     <script src="image_viewer.js"></script>
     <script src="/assets/header.js"></script>
 </head>
-<body class="desktop" onload="document.gcamow = {site: 'home'}; runOnLoad()">
+<body class="desktop" onload="document.gcamow = {site: 'home'};">
     <!-- header -->
     <div w3-include-html="/assets/header.html"></div>
     <script>includeHTML()</script>
@@ -66,7 +66,7 @@
         <div>Contact</div>
         <div>Donate</div>
     </div> -->
-    <div class="top_image">
+    <div class="top_image" id="home">
         <img src="assets/Mayor Randy Riddle.jpg" alt="">
         <div class="business_title">
             <div class="business_title_gca">Grove City Area</div>
@@ -79,7 +79,7 @@
     <!-- <div class="site_body"> -->
         <div class="spacing"></div>
         <div class="site_body">
-            <div class="section_heading center_text">Nutritious, convinient meals - delivered to your door!</div>
+            <div class="section_heading center_text">Nutritious, convenient meals - delivered to your door!</div>
             <div></div>
             <div class="hero_button_container">
                 <div class="primary_action_button" onclick="scrollSite('contact')">Contact Us</div>
@@ -91,9 +91,19 @@
             <!-- About -->
         </div>
         <div class="site_body section_about">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fuga necessitatibus rerum aspernatur dolorem ullam autem adipisci, magni voluptatem, recusandae excepturi dicta minus optio reiciendis id fugiat possimus doloribus placeat.</p>
+            <div>
+            <p>
+                Grove City Area Meals on Wheels is a neighborhood service that delivers fresh, nutritious, and well-balanced meals directly to your home at a low cost.
+            </p>
+            <p>
+                We prepare and provide hot, nutritious meals 5 days a week to the aged, convalescent and handicapped individuals of our community allowing them to live independently in their own home.
+            </p>
+            <p>
+                Delivery locations include Grove City, Leesburg, Mercer, Harrisville & Slippery Rock.
+            </p>
+        </div>
             <div class="about_image_container" >
-                <img src="assets/meal_bags_.jpg" class="fit_image" alt="">
+                <img src="assets/meal_bags_.jpg" class="fit_image" id="about_image" alt="">
                 <div class="about_view_more_images" onclick="showImageViewer()">
                     view more images
                 </div>
@@ -134,7 +144,7 @@
                                 <input class="contact_form_item_input" type="tel" name="phone" required>
                             </div>
                             <div class="contact_form_item">
-                                <label  class="contact_form_item_label" for="address">Address</label>
+                                <label  class="contact_form_item_label" for="address">Delivery Address</label>
                                 <textarea name="address" class="contact_form_address contact_form_item_input" required></textarea>
                             </div>
                         </div>

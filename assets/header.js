@@ -1,41 +1,42 @@
+document.addEventListener("DOMContentLoaded", function() {
+  // Code to run when the DOM is fully loaded
+  includeHTML();  // Make sure HTML is included first
+  pollDOM();  // Then start polling for the header elements
+  runOnLoad();  // Any other initialization code
+});
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+          if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();  // Ensure recursive call to include nested HTML
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      return;
+    }
+  }
+}
+
 function pollDOM() {
   const el = document.getElementById('header_container');
   const el2 = document.getElementById('header_back_button');
   if (el != null && el2 == null) {
-    header_draw_back()
+    header_draw_back();
   } else {
-    setTimeout(pollDOM, 300); // try again in 300 milliseconds
+    setTimeout(pollDOM, 300);  // Keep polling if not found yet
   }
 }
-
-function includeHTML() {
-  pollDOM()
-    var z, i, elmnt, file, xhttp;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain atrribute:*/
-      file = elmnt.getAttribute("w3-include-html");
-      if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /*remove the attribute, and call this function once more:*/
-            elmnt.removeAttribute("w3-include-html");
-            includeHTML();
-          }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /*exit the function:*/
-        return;
-      }
-    }
-};
 
 function header_draw_back(){
   if(window.location.pathname.split('/').length > 3){
@@ -62,9 +63,13 @@ function header_hide_menu(){
   // document.getElementById("header_container").style.top = "calc(var(--header-scale)*-6)"
   // document.getElementById("header_container").style.opacity = 0
   hideMobileNavList()
-  document.getElementById("header_reveal_button").setAttribute("onclick", "header_reveal_menu()")
-  for(i=1;i<=3;i++){
-    document.getElementById(`header_menu_line${i}`).innerHTML = ``
+  try {
+    document.getElementById("header_reveal_button").setAttribute("onclick", "header_reveal_menu()")
+    for(i=1;i<=3;i++){
+      document.getElementById(`header_menu_line${i}`).innerHTML = ``
+    }
+  } catch (error) {
+    
   }
 }
 
@@ -82,13 +87,58 @@ function header_hide_menu(){
 //     </div>`
 // }
 
-function runOnLoad(){
-  window.dispatchEvent(new Event('resize'));
-  goToSite(window.location.href.split("#")[1].split("/")[0])
+function replaceAddressBar(url) {
+  history.pushState(null, '', url);
 }
 
+
+function runOnLoad(){
+  // Get the full URL of the current page
+  const queryString = window.location.search; // ?userID=123&token=abc
+
+  // Create a URLSearchParams object
+  const urlParams = new URLSearchParams(queryString);
+
+  // Access individual parameters
+  const scrollID = urlParams.get('scrollTo');
+  
+  console.log(queryString,urlParams,scrollID)
+  if(scrollID){
+    setTimeout(() => {
+      goToSite(scrollID)
+    }, 200);
+    //TODO: JANK SOLUTION
+  }
+
+  replaceAddressBar(window.location.pathname)
+
+  const resizeEvent = new Event('resize');
+
+  // Dispatch the event to the window
+  window.dispatchEvent(resizeEvent);
+
+  setTimeout(() => {
+    noRedirectA()
+  }, 200);
+}
+
+function noRedirectA(){
+  const links = document.querySelectorAll('a');
+  console.log(links)
+  links.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevent the default link behavior
+    });
+  });
+}
+
+
 function hideMobileNavList(){
-  document.getElementById("mobile_nav_list").style.display = "none"
+  try {
+    document.getElementById("mobile_nav_list").style.display = "none"
+  } catch (error) {
+    
+  }
 }
 
 function showMobileNavList(){
@@ -96,28 +146,42 @@ function showMobileNavList(){
   document.getElementById("mobile_nav_list").style.display = "flex"
 }
 
+function getCurrentSite(){
+  sitePath = window.location.pathname.split("/")
+  currentSite = sitePath[sitePath.length-2]
+  if(currentSite == ""){currentSite="home"}
+  return currentSite
+}
+
 function goToSite(id){
   header_hide_menu()
   links = [
-    'home', 'volunteer'
+    'home', 'volunteer', 'payment'
   ]
   sites = {
-    home: ['about', 'contact', 'donate'],
-    volunteer: ['volunteer']
+    home: ['about', 'contact', 'donate', 'home'],
+    volunteer: ['volunteer'],
+    payment: ['payment'],
   }
-  console.log(id)
-  if(sites[document.gcamow.site].indexOf(id) >= 0){
+
+  if(sites[getCurrentSite()].indexOf(id) >= 0){
     scrollSite(id)
     //TODO: undefined
+    console.log(window.location.pathname)
   }else{
     siteToLink = ""
     links.forEach(element => {
       if(sites[element].indexOf(id) >= 0){
-        siteToLink = element
-        if(siteToLink == "home"){siteToLink = "/"}
+        siteToLink = `/${element}`
+        if(siteToLink == "/home"){siteToLink = "/"}
       }
     });
-    window.location.href = siteToLink+"#"+id;
+    if(id != "volunteer" && id != "payment"){
+      window.location.href = siteToLink+"?scrollTo="+id;
+    }
+    else{
+      window.location.href = siteToLink
+    }
   }
 }
 
@@ -134,7 +198,18 @@ function getSiteType(){
 function scrollSite(id){
   element = document.getElementById(id)
 
-  navBarHeight = document.getElementById("desktop_nav_spacing").getBoundingClientRect().height
+  if(!element){
+    console.error(element)
+    return
+  }
+
+  if(document.getElementById("desktop_nav_spacing")){
+    navBarHeight = document.getElementById("desktop_nav_spacing").getBoundingClientRect().height
+  }
+  else{
+    console.log(id)
+    return
+  }
 
   if(getSiteType() == "mobile"){
     navBarHeight = document.getElementById("mobile_nav_spacing").getBoundingClientRect().height
@@ -159,14 +234,18 @@ window.addEventListener('resize', function() {
 });
 
 function changeExperience(type){
-  if(type=="desktop" && document.body.classList.contains("mobile")){
-    document.body.classList.remove("mobile")
-    document.body.classList.add("desktop")
+  if(type=="desktop"){
+    if(document.body.classList.contains("mobile")){
+      document.body.classList.remove("mobile")
+      document.body.classList.add("desktop")
+    }
     header_hide_menu()
   }
-  else if(type=="mobile" && document.body.classList.contains("desktop")){
-    document.body.classList.remove("desktop")
-    document.body.classList.add("mobile")
+  else if(type=="mobile"){
+    if(document.body.classList.contains("desktop")){
+      document.body.classList.remove("desktop")
+      document.body.classList.add("mobile")
+    }
   }else{
     console.error("reached (what should be) unreachable code")
   }

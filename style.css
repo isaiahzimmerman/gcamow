@@ -14,7 +14,6 @@ body{
 }
 
 .desktop_nav_bar{
-    display: flex;
     height: 5rem;
     width: 90%;
     padding: 0.75rem 5%;
@@ -81,21 +80,28 @@ body{
 
 .mobile_nav_list{
     display: none;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     position: fixed;
-    top: min(10rem, 30vw);
+    top: min(8rem, 24vw);
     left: 0;
-    width: 100%;
-    height: calc(100% - min(10rem, 30vw));
+    width: calc(100% - 6rem);
+    height: calc(100% - min(8rem, 24vw));
     padding: 3rem;
     transition: display 1s;
     z-index: 2;
+    flex-direction: column;
+    font-size: 5rem;
+}
 
+.mobile_nav_item{
+    border: 1px solid black;
+    margin: 20px;
+    text-align: center;
 }
 
 .mobile_nav_spacing{
-    height: min(10rem, 30vw);
+    height: min(8rem, 24vw);
 }
 
 .desktop .mobile_nav_spacing, .desktop .mobile_nav_buttons{
@@ -105,25 +111,27 @@ body{
 .mobile_nav_buttons{
     display: flex;
     justify-content: space-between;
-    height: min(10rem, 30vw);
+    height: min(8rem, 24vw);
     
     position: fixed;
-    background-color: white;
+    background-color: var(--theme-yellow);
     width: 100%;
     z-index: 2;
 
 }
 
 .mobile_nav_button{
-    width: min(10rem, 30vw);
+    width: min(8rem, 24vw);
     aspect-ratio: 1;
     text-align: center;
     display: flex;
+    align-items: center;
 }
 
 .mobile_logo{
     width: 100%;
     object-fit: contain;
+    height: fit-content;
 }
 
 
@@ -324,11 +332,15 @@ p{
     /* filter: grayscale(); */
 }
 
-.volunteer_type_label{
-    font-size: 1rem;
-    width: unset;
+
+
+a{
+    text-decoration: none;
 }
 
-.volunteer_type_checkbox_container{
-    display: flex;
+a:visited{
+    /* height: 100%; */
+    /* display: block; */
+    color: black;
+    text-decoration: overline;
 }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Payment</title>
+    <script src="/assets/header.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/assets/header.css">
+</head>
+<body class="desktop" onload="document.gcamow = {site: 'payment'};">
+    <!-- header -->
+    <div w3-include-html="/assets/header.html"></div>
+    <script>includeHTML()</script>
+    <!-- header -->
+    <div class="site_body">
+        <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=c5f76b771403110a5081e1" target="HelcimPaymentPage">
+            <input type="submit" name="submit" value="Pay Now">
+        </form>
+    </div>
+</body>
+</html>

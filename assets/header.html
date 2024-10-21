@@ -8,15 +8,15 @@
 
     </div>
     <div class="desktop_nav_bar">
-        <div class="desktop_nav_logo">
-            <a href="/"><img src="/assets/image2vector(1).svg" alt=""></a>
+        <div class="desktop_nav_logo" onclick="goToSite('home')">
+            <img src="/assets/image2vector(1).svg" alt="">
         </div>
         <div class="desktop_nav_elements">
-            <div class="desktop_nav_element" onclick='goToSite("about")'>About</div>
-            <div class="desktop_nav_element" onclick='goToSite("contact")'>Contact</div>
-            <div class="desktop_nav_element" onclick="goToSite('donate')">Donate</div>
-            <div class="desktop_nav_element" onclick="goToSite('volunteer')">Volunteer</div>
-            <div class="desktop_nav_element" onclick="goToSite('payment')">Payment</div>
+            <a class="desktop_nav_element" onclick='goToSite("about")' href="/?scrollTo=about">About</a>
+            <a class="desktop_nav_element" onclick='goToSite("contact")' href="/?scrollTo=contact">Contact</a>
+            <a class="desktop_nav_element" onclick="goToSite('donate')" href="/?scrollTo=donate">Donate</a>
+            <a class="desktop_nav_element" onclick="goToSite('volunteer')" href="/volunteer/">Volunteer</a>
+            <a class="desktop_nav_element" onclick="goToSite('payment')" href="/payment/">Payment</a>
         </div>
     </div>
     <div class="desktop_nav_spacing" id="desktop_nav_spacing"></div>
@@ -39,18 +39,17 @@
                 <div class="header_menu_line header_menu_line3" id="header_menu_line3"></div>
             </div>
         </div>
-        <div class="mobile_nav_button">
-            <a href="/">
-                <img src="/assets/logo.png" alt="" class="mobile_logo">
-            </a>
+        <div class="mobile_nav_button" onclick="goToSite('home')">
+            <img src="/assets/image2vector(1).svg" alt="" class="mobile_logo">
         </div>
     </div>
     <div class="mobile_nav_spacing" id="mobile_nav_spacing"></div>
     <div class="mobile_nav_list" id="mobile_nav_list">
-        <div onclick="goToSite('about')">About</div>
-        <div onclick="goToSite('contact')">Contact</div>
-        <div onclick="goToSite('donate')">Donate</div>
-        <div onclick="goToSite('volunteer')">Volunteer</div>
+        <a class="mobile_nav_item" onclick="goToSite('about')" href="/?scrollTo=about">About</a>
+        <a class="mobile_nav_item" onclick="goToSite('contact')" href="/?scrollTo=contact">Contact</a>
+        <a class="mobile_nav_item" onclick="goToSite('donate')" href="/?scrollTo=donate">Donate</a>
+        <a class="mobile_nav_item" onclick="goToSite('volunteer')" href="/volunteer/">Volunteer</a>
+        <a class="mobile_nav_item" onclick="goToSite('payment')" href="/payment/">Payment</a>
 
     </div>
 </body>

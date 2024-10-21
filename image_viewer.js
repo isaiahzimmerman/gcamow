@@ -20,4 +20,5 @@ function showImageViewer(){
 function hideImageViewer(){
     document.getElementById("image_viewer_bg").style.display = "none"
     document.getElementById("image_viewer").style.display = "none"
+    document.getElementById("about_image").src = "/assets/promotional_images/"+imageNames[currentImageIndex]
 }
