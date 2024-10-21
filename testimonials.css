@@ -14,7 +14,7 @@
 
 
 .testimonial_container{
-    background-color: #ffe79a;
+    background-color: #ffd779;
     width: 100%;
     height: 100%;
     /* padding: 10px; */
@@ -26,11 +26,11 @@
 }
 
 .testimonial_stack_1{
-    background-color: #dbbd59;
+    background-color: #ffc744;
 }
 
 .testimonial_stack_2{
-    background-color: #a7955d;
+    background-color: #ffb300;
 }
 
 .testimonial_stack_container{

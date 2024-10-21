@@ -2,6 +2,7 @@
     --theme-black: #343131;
     --theme-red: #742414;
     --theme-yellow: #ffc404;
+    --theme-gold: #ffb300;
 }
 
 body{
@@ -91,13 +92,21 @@ body{
     transition: display 1s;
     z-index: 2;
     flex-direction: column;
-    font-size: 5rem;
+    font-size: min(5rem, 15vw);
 }
 
 .mobile_nav_item{
-    border: 1px solid black;
+    border: 4px solid var(--theme-red);
+    border-radius: 10px;
     margin: 20px;
     text-align: center;
+    color: var(--theme-red);
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.mobile_nav_item:hover{
+    background-color: var(--theme-red);
+    color: white;
 }
 
 .mobile_nav_spacing{
@@ -340,7 +349,7 @@ a{
 
 a:visited{
     /* height: 100%; */
-    /* display: block; */
-    color: black;
+    /* display: block;
+    color: */
     text-decoration: overline;
 }

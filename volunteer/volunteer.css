@@ -8,6 +8,13 @@
 
 .mobile .volunteer_types{
     flex-direction: column;
+    justify-content: center;
+}
+
+.mobile .volunteer_type{
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(100% - 40px);
 }
 
 .volunteer_type{
