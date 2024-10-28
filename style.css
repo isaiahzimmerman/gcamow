@@ -5,6 +5,11 @@
     --theme-gold: #ffb300;
 }
 
+@font-face {
+    font-family: bahnschrift;
+    src: url(/assets/bahnschrtift.TTF);
+}
+
 body{
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -12,6 +17,13 @@ body{
     font-weight: 400;
     font-style: normal;
     color: var(--theme-black);
+    min-height: 100%;
+}
+
+.footer{
+    /* position: absolute; */
+    /* bottom: 10px; */
+    /* width: 100%; */
 }
 
 .desktop_nav_bar{
@@ -83,30 +95,64 @@ body{
     display: none;
     background-color: white;
     color: black;
-    position: fixed;
-    top: min(8rem, 24vw);
+    position: flex;
+    top: 0;
     left: 0;
-    width: calc(100% - 6rem);
-    height: calc(100% - min(8rem, 24vw));
-    padding: 3rem;
-    transition: display 1s;
+    width: 100%;
+    height: fit-content;
+    /* padding-top: min(8rem, 24vw); */
+    /* transition: display 1s; */
     z-index: 2;
     flex-direction: column;
-    font-size: min(5rem, 15vw);
+    font-size: min(4rem, 12vw);
+    align-items: center;
+    /* justify-content: center; */
+    overflow: scroll;
+    padding: 2rem 0;
+    pointer-events: all;
+}
+
+body.noScroll{
+    overflow: hidden;
+}
+
+.mobile_nav_container{
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.noScroll .mobile_nav_container{
+    background-color: white;
+
 }
 
 .mobile_nav_item{
-    border: 4px solid var(--theme-red);
+    border: 4px solid white;
+    background-color: white;
+    padding: 5px 15px;
     border-radius: 10px;
     margin: 20px;
     text-align: center;
     color: var(--theme-red);
-    transition: background-color 0.25s, color 0.25s;
+    transition: background-color 0.25s, color 0.25s, border-color 0.25s;
 }
 
 .mobile_nav_item:hover{
+    color: var(--theme-red);
+    border-color: var(--theme-red);
     background-color: var(--theme-red);
     color: white;
+}
+
+.mobile_nav_divider{
+    border-bottom: 5px dashed var(--theme-red);
+    width: 50%;
+    justify-self: center;
 }
 
 .mobile_nav_spacing{
@@ -121,11 +167,12 @@ body{
     display: flex;
     justify-content: space-between;
     height: min(8rem, 24vw);
-    
-    position: fixed;
+/*     
+    position: fixed; */
     background-color: var(--theme-yellow);
     width: 100%;
-    z-index: 2;
+    z-index: 3;
+    pointer-events: all;
 
 }
 
@@ -211,13 +258,30 @@ body{
     height: 25rem;
     /* object-fit: cover; */
     position: relative;
+    z-index: 1;
 }
 
 .business_title{
     position: absolute;
     bottom: 2rem;
     left: 2rem;
-    /* font-weight: 400; */
+    /* font-weight: bold; */
+    font-family: bahnschrift;
+}
+
+div.phone_number{
+    width: 100%;
+    background-color: var(--theme-red);
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+div.phone_number a{
+    color: white;
+}
+
+div.phone_number a:hover{
 }
 
 .business_title div{

@@ -53,6 +53,7 @@ function header_reveal_menu(){
   // document.getElementById("header_container").style.top = "0"
   // document.getElementById("header_container").style.opacity = 1
   showMobileNavList()
+  document.body.classList.add("noScroll")
   document.getElementById("header_reveal_button").setAttribute("onclick", "header_hide_menu()")
   for(i=1;i<=3;i++){
     document.getElementById(`header_menu_line${i}`).innerHTML = `<div></div>`
@@ -63,6 +64,7 @@ function header_hide_menu(){
   // document.getElementById("header_container").style.top = "calc(var(--header-scale)*-6)"
   // document.getElementById("header_container").style.opacity = 0
   hideMobileNavList()
+  document.body.classList.remove("noScroll")
   try {
     document.getElementById("header_reveal_button").setAttribute("onclick", "header_reveal_menu()")
     for(i=1;i<=3;i++){
@@ -119,11 +121,19 @@ function runOnLoad(){
 
   setTimeout(() => {
     noRedirectA()
-  }, 200);
+  }, 400);
+
+  footerElement = document.getElementById("footer_current_year")
+  while(!footerElement){
+    setTimeout(() => {
+      footerElement = document.getElementById("footer_current_year")
+    }, 100);
+  }
+  footerElement.innerHTML = new Date().getFullYear()
 }
 
 function noRedirectA(){
-  const links = document.querySelectorAll('a');
+  const links = document.querySelectorAll('a:not(.hrefOn)');
   console.log(links)
   links.forEach(link => {
     link.addEventListener('click', (event) => {

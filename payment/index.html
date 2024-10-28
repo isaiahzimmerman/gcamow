@@ -6,6 +6,8 @@
     <title>Make a Payment</title>
     <script src="/assets/header.js"></script>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/action_button.css">
+    <link rel="stylesheet" href="/payment/payment.css">
     <link rel="stylesheet" href="/assets/header.css">
 </head>
 <body class="desktop" onload="document.gcamow = {site: 'payment'};">
@@ -13,10 +15,24 @@
     <div w3-include-html="/assets/header.html"></div>
     <script>includeHTML()</script>
     <!-- header -->
+    <div class="spacing"></div>
+    <div class="site_body section_heading">Payment</div>
     <div class="site_body">
+        <p>
+            Thank you for being a loyal GCAMOW customer!
+        </p>
+        <p>
+            Please use the link below to pay your balance. Include your name[, CID, and Invoice ID] so we can identify you with your bill.
+        </p>
+    </div>
+    <div class="site_body payment_button_container">
         <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=c5f76b771403110a5081e1" target="HelcimPaymentPage">
-            <input type="submit" name="submit" value="Pay Now">
+            <input type="submit" name="submit" value="Pay Now" class="payment_button action_button primary_action_button">
         </form>
+    </div>
+    <div class="spacing"></div>
+    <div class="site_body footer center_text">
+        © <span id="footer_current_year"></span> Grove City Area Meals on Wheels. All rights reserved.
     </div>
 </body>
 </html>

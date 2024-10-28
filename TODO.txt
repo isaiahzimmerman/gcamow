@@ -1,2 +1,3 @@
 TODO: change form submission redirect
-TODO: edit gcamow logo, add white background
+TODO: add footer
+TODO: decide on phone number placement

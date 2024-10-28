@@ -1,0 +1,16 @@
+.payment_button_container{
+    display: flex;
+    justify-content: center;
+}
+
+.payment_button_container form{
+    width: 50%;
+}
+
+.mobile .payment_button_container form{
+    width: 100%;
+}
+
+.payment_button{
+    width: 100%;
+}
