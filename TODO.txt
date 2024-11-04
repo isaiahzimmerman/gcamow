@@ -1,3 +1,11 @@
 TODO: change form submission redirect
-TODO: add footer
-TODO: decide on phone number placement
+
+done: Holy Trinity Lutheran Church
+
+TODO: manual
+    * how to make an invoice
+    * how to change images
+    * toggleable/popup for closing due to inclement weather
+        * also make the message editable.
+        * expires after a certain amount of time
+    * change prices

@@ -1,6 +1,7 @@
 .about_image_container{
     position: relative;
-    cursor: pointer;
+    /* cursor: pointer; */
+    /* TODO */
 }
 
 .about_view_more_images{
@@ -26,9 +27,10 @@
 
 .mobile .about_view_more_images, .mobile #about_image{
     width: 100%;
-    aspect-ratio: 3/2;
+    aspect-ratio: 5/4;
 }
 
-.about_image_container:hover .about_view_more_images{
+/* .about_image_container:hover .about_view_more_images{
     opacity: 1;
-}
+    TODO
+} */

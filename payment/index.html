@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make a Payment</title>
+    <script src="/updates.js"></script>
     <script src="/assets/header.js"></script>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/action_button.css">
@@ -11,6 +12,18 @@
     <link rel="stylesheet" href="/assets/header.css">
 </head>
 <body class="desktop" onload="document.gcamow = {site: 'payment'};">
+    <div id="siteWarningContainer" class="siteWarningContainer">
+        <img class="warningSymbol" src="/assets/warning.svg" alt="">
+        <div id="siteWarning" class="siteWarning">
+            Grove City Area Meals on Wheels is closed today (MM/DD/YY) due to inclement weather. Thank you for your understanding.
+        </div>
+        <div class="hideSiteWarning" onclick="hideSiteWarning()">
+            <img class="hideSiteWarningIMG" src="/assets/close-icon.svg" alt="">
+        </div>
+    </div>
+    <div id="showSiteWarning" class="showSiteWarning" onclick="showSiteWarning()">
+        <img class="showSiteWarningIMG" src="/assets/plus-icon.svg" alt="">
+    </div>
     <!-- header -->
     <div w3-include-html="/assets/header.html"></div>
     <script>includeHTML()</script>
@@ -22,7 +35,7 @@
             Thank you for being a loyal GCAMOW customer!
         </p>
         <p>
-            Please use the link below to pay your balance. Include your name[, CID, and Invoice ID] so we can identify you with your bill.
+            Please use the link below to pay your balance. Please include the name of the person who recieved the meals so we can identify you with your bill.
         </p>
     </div>
     <div class="site_body payment_button_container">

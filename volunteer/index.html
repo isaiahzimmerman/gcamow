@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer for GCAMOW</title>
+    <script src="/updates.js"></script>
     <script src="/assets/header.js"></script>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/volunteer/volunteer.css">
     <link rel="stylesheet" href="/assets/header.css">
 </head>
 <body class="desktop" onload="document.gcamow = {site: 'volunteer'};">
+    <div id="siteWarningContainer" class="siteWarningContainer">
+        <img class="warningSymbol" src="/assets/warning.svg" alt="">
+        <div id="siteWarning" class="siteWarning">
+            Grove City Area Meals on Wheels is closed today (MM/DD/YY) due to inclement weather. Thank you for your understanding.
+        </div>
+        <div class="hideSiteWarning" onclick="hideSiteWarning()">
+            <img class="hideSiteWarningIMG" src="/assets/close-icon.svg" alt="">
+        </div>
+    </div>
+    <div id="showSiteWarning" class="showSiteWarning" onclick="showSiteWarning()">
+        <img class="showSiteWarningIMG" src="/assets/plus-icon.svg" alt="">
+    </div>
     <!-- header -->
     <div w3-include-html="/assets/header.html"></div>
     <script>includeHTML()</script>

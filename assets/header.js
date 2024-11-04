@@ -93,6 +93,23 @@ function replaceAddressBar(url) {
   history.pushState(null, '', url);
 }
 
+function siteWarningExpired(){
+  today = new Date()
+  expireDate = new Date(updates.expires.year, updates.expires.month-1, updates.expires.day, updates.expires.hour, updates.expires.minute)
+
+  return expireDate.getTime() < today.getTime()
+}
+
+function hideSiteWarning(){
+  document.getElementById("siteWarningContainer").style.display = "none"
+  document.getElementById("showSiteWarning").style.display = "flex"
+}
+
+function showSiteWarning(){
+  document.getElementById("siteWarningContainer").style.display = "flex"
+  document.getElementById("showSiteWarning").style.display = "none"
+}
+
 
 function runOnLoad(){
   // Get the full URL of the current page
@@ -130,6 +147,20 @@ function runOnLoad(){
     }, 100);
   }
   footerElement.innerHTML = new Date().getFullYear()
+
+  siteWarning = document.getElementById("siteWarning")
+  siteWarningContainer = document.getElementById("siteWarningContainer")
+  while(!siteWarning){
+    setTimeout(() => {
+      siteWarning = document.getElementById("siteWarning")
+      siteWarningContainer = document.getElementById("siteWarningContainer")
+
+    }, 100);
+  }
+  if(!siteWarningExpired()){
+    siteWarning.innerHTML = updates.message
+    siteWarningContainer.style.display = "flex"
+  }
 }
 
 function noRedirectA(){

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="image_viewer.css">
     <script src="main.js"></script>
     <script src="image_viewer.js"></script>
+    <script src="/updates.js"></script>
     <script src="/assets/header.js"></script>
 </head>
 <body class="desktop" onload="document.gcamow = {site: 'home'};">
@@ -67,11 +68,23 @@
         <div>Donate</div>
     </div> -->
     <div class="top_image" id="home">
-        <img src="assets/Mayor Randy Riddle.jpg" alt="">
+        <img src="assets/image2.jpeg" alt="">
         <div class="business_title">
             <div class="business_title_gca">Grove City Area</div>
             <div class="business_title_mow">Meals on Wheels</div>
         </div>
+    </div>
+    <div id="siteWarningContainer" class="siteWarningContainer">
+        <img class="warningSymbol" src="/assets/warning.svg" alt="">
+        <div id="siteWarning" class="siteWarning">
+            Grove City Area Meals on Wheels is closed today (MM/DD/YY) due to inclement weather. Thank you for your understanding.
+        </div>
+        <div class="hideSiteWarning" onclick="hideSiteWarning()">
+            <img class="hideSiteWarningIMG" src="/assets/close-icon.svg" alt="">
+        </div>
+    </div>
+    <div id="showSiteWarning" class="showSiteWarning" onclick="showSiteWarning()">
+        <img class="showSiteWarningIMG" src="/assets/plus-icon.svg" alt="">
     </div>
     <div class="photo_scroll">
         
@@ -104,8 +117,9 @@
                 </p>
             </div>
             <div class="about_image_container" >
-                <img src="assets/meal_bags_.jpg" class="fit_image" id="about_image" alt="">
-                <div class="about_view_more_images" onclick="showImageViewer()">
+                <img src="assets/image3.jpeg" class="fit_image" id="about_image" alt="">
+                <!-- <div class="about_view_more_images" onclick="showImageViewer()"> -->
+                <div class="about_view_more_images">
                     view more images
                 </div>
             </div>
@@ -139,10 +153,9 @@
                 <a href="tel:+17244585371" class="hrefOn">724-458-5371</a>
             </div>
             <div>
-                <a href="https://maps.app.goo.gl/eLzJ4bqYWTsLnJBG8" class="hrefOn">819 Columbia Avenue Grove City, PA</a>
+                <a href="https://maps.app.goo.gl/eLzJ4bqYWTsLnJBG8" class="hrefOn">819 Columbia Avenue, Grove City, PA</a>
             </div>
         </div>
-        <div class="spacing"></div>
         <div class="site_body section_heading">Contact</div>
         <div class="site_body">
             
@@ -272,15 +285,16 @@
         <div class="spacing"></div>
         <!-- <div>Sponsors</div> -->
         <div class="sponsors site_body">
-            <div>
+            <div class="sponsor">
                 <img src="assets/united_way.jpg" alt="">
             </div>
             <!-- <div>
                 <img src="assets/giant_eagle.png" alt="">
             </div> -->
-            <div>
-                <img src="assets/holy_trinity.jpg" alt="">
-                <!-- Holy -->
+            <div class="sponsor">
+                <img class="holy_trinity" src="assets/holy_trinity.jpg" alt="">
+                <div class="holy_trinity_text">Holy Trinity</div>
+                <div class="holy_trinity_text">Lutheran Church</div>
             </div>
         </div>
         <div class="spacing"></div>
