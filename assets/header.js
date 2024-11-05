@@ -121,7 +121,7 @@ function runOnLoad(){
   // Access individual parameters
   const scrollID = urlParams.get('scrollTo');
   
-  console.log(queryString,urlParams,scrollID)
+  // console.log(queryString,urlParams,scrollID)
   if(scrollID){
     setTimeout(() => {
       goToSite(scrollID)
@@ -165,7 +165,7 @@ function runOnLoad(){
 
 function noRedirectA(){
   const links = document.querySelectorAll('a:not(.hrefOn)');
-  console.log(links)
+  // console.log(links)
   links.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault(); // Prevent the default link behavior
@@ -208,7 +208,7 @@ function goToSite(id){
   if(sites[getCurrentSite()].indexOf(id) >= 0){
     scrollSite(id)
     //TODO: undefined
-    console.log(window.location.pathname)
+    // console.log(window.location.pathname)
   }else{
     siteToLink = ""
     links.forEach(element => {
@@ -248,7 +248,7 @@ function scrollSite(id){
     navBarHeight = document.getElementById("desktop_nav_spacing").getBoundingClientRect().height
   }
   else{
-    console.log(id)
+    // console.log(id)
     return
   }
 

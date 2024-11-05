@@ -15,6 +15,7 @@
     <script src="image_viewer.js"></script>
     <script src="/updates.js"></script>
     <script src="/assets/header.js"></script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
 </head>
 <body class="desktop" onload="document.gcamow = {site: 'home'};">
     <!-- header -->
@@ -113,7 +114,7 @@
                     We prepare and provide hot, nutritious meals 5 days a week to the aged, convalescent and handicapped individuals of our community allowing them to live independently in their own home.
                 </p>
                 <p>
-                    Delivery locations include Grove City, Leesburg, Mercer, Harrisville & Slippery Rock.
+                    Delivery locations include parts of Grove City, Leesburg, Mercer, Harrisville & Slippery Rock.
                 </p>
             </div>
             <div class="about_image_container" >
@@ -207,7 +208,11 @@
             Donate
         </div>
         <div class="site_body donation_container">
+            <div class="donation_description">
+                Grove City Area Meals on Wheels is only able to provide meals to the disabled and elderly population of our area with your support. Thank you!
+            </div>
             <div class="donation_presets">
+                
                 <form name="HcmPayPage" method="POST" action="https://grove-city-area-meals-on-wheels.myhelcim.com/hosted/?token=9587efb49416c2921f184e" target="HelcimPaymentPage">
                     <input type="hidden" name="amount" value="5.00">
                     <input type="submit" name="submit" value="$5" class="donation_preset primary_action_button">
@@ -233,9 +238,7 @@
                     <input type="submit" name="submit" value="Custom" class="donation_preset primary_action_button">
                 </form>
             </div>
-            <div class="donation_description">
-                Grove City Area Meals on Wheels is only able to provide meals to the disabled and elderly population of our area with your support. Thank you!
-            </div>
+            
         </div>
         
         <div class="spacing"></div>
@@ -300,7 +303,8 @@
         <div class="spacing"></div>
     <!-- </div> -->
     <div class="site_body footer center_text">
-        © <span id="footer_current_year"></span> Grove City Area Meals on Wheels. All rights reserved.
+        <div>Visit us on <a href="https://www.facebook.com/GCMealsOnWheels" class="hrefOn">Facebook</a></div>
+        <div>© <span id="footer_current_year"></span> Grove City Area Meals on Wheels. All rights reserved.</div>
     </div>
 </body>
 </html>

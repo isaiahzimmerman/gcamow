@@ -9,3 +9,5 @@ TODO: manual
         * also make the message editable.
         * expires after a certain amount of time
     * change prices
+
+TODO: fix volunteer image

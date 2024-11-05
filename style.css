@@ -383,7 +383,7 @@ p{
     padding: 1rem 0;
     width: 80%;
     border: 1.5px solid black;
-    border-radius: 5px;
+    border-radius: 0;
     cursor: pointer;
     background-color: var(--theme-red);
     color: white;
