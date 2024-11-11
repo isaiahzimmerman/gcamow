@@ -14,6 +14,7 @@
     <script src="main.js"></script>
     <script src="image_viewer.js"></script>
     <script src="/updates.js"></script>
+    <script src="/changePictures.js"></script>
     <script src="/assets/header.js"></script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
 </head>
@@ -69,7 +70,7 @@
         <div>Donate</div>
     </div> -->
     <div class="top_image" id="home">
-        <img src="/assets/image2.jpeg" alt="">
+        <img src="/assets/image2.jpeg" id="top_image_img" alt="">
         <div class="business_title">
             <div class="business_title_gca">Grove City Area</div>
             <div class="business_title_mow">Meals on Wheels</div>
@@ -111,18 +112,18 @@
                     Grove City Area Meals on Wheels is a neighborhood service that delivers fresh, nutritious, and well-balanced meals directly to your home at a low cost.
                 </p>
                 <p>
-                    We prepare and provide hot, nutritious meals 5 days a week to the aged, convalescent and handicapped individuals of our community allowing them to live independently in their own home.
+                    We prepare and provide hot, nutritious meals 5 days a week to persons who are unable to provide for themselves, allowing them to live independently in their own home.
                 </p>
                 <p>
-                    Delivery locations include parts of Grove City, Leesburg, Mercer, Harrisville & Slippery Rock.
+                    Delivery locations include areas of Grove City, Leesburg, Mercer, Harrisville & Slippery Rock.
                 </p>
             </div>
             <div class="about_image_container" >
                 <img src="/assets/image3.jpeg" class="fit_image" id="about_image" alt="">
                 <!-- <div class="about_view_more_images" onclick="showImageViewer()"> -->
-                <div class="about_view_more_images">
-                    view more images
-                </div>
+                <!-- <div class="about_view_more_images">
+                    view more images -->
+                <!-- </div> -->
             </div>
         </div>
         <div id="image_viewer_bg" class="image_viewer_bg" onclick="hideImageViewer()"></div>
@@ -139,13 +140,16 @@
         <div class="site_body section_heading">Meals</div>
         <div class="site_body">
             <p>
-                Our meals are delivered 5 days a week (except major holidays). They are delivered by volunteers to your home Monday through Friday between 11 a.m. & Noon.
+                Our meals are well balanced with healthy portions and have been approved by a dietician. There is a nice variety of meals since we use a 5-week menu rotation. Our volunteers deliver the meals to your home, Monday-Friday, except major holidays, between 11 AM & Noon. Our holidays include New Years Day, Memorial Day, 4th of July, Labor Day, Thanksgiving Day, Black Friday, and Christmas Day.
             </p>
             <p>
-                Each meal is well-balanced with healthy portions—We deliver on a five-week rotation consisting of a variety of dietician-approved meals. Milk, bread & butter are also included with the hot meal.
+                The cost of a hot meal is $4.00 a day which would consist of a protein, vegetable, potato, fruit, bread & butter and milk.
             </p>
             <p>
-                A hot meal costs $4.00 per day, or $6.00 per day if you choose a hot meal plus a light cold supper.
+                For $6.00 a day, you get a hot meal and a cold light supper. A sample cold meal includes a sandwich, salad and juice.
+            </p>
+            <p>
+                In the event that we would have to close due to severe weather conditions, notices will be posted on Facebook, and on television under Closings on Youngstown channels WFMJ (21), WKBN (27) and WYTV (33) and on Pittsburgh Channels KDKA (2) and WPXI (11)
             </p>
         </div>
         <div class="spacing"></div>
@@ -209,7 +213,7 @@
         </div>
         <div class="site_body donation_container">
             <div class="donation_description">
-                Grove City Area Meals on Wheels is only able to provide meals to the disabled and elderly population of our area with your support. Thank you!
+                Grove City Area Meals on Wheels is not federally funded and depends on your support to help us keep meals affordable to people in our area who are unable to prepare meals for themselves. Thank you!
             </div>
             <div class="donation_presets">
                 

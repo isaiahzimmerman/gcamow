@@ -129,6 +129,10 @@ function runOnLoad(){
     //TODO: JANK SOLUTION
   }
 
+  changePictures.forEach(element => {
+    changeIMG(element.id, element.src)
+  });  
+
   replaceAddressBar(window.location.pathname)
 
   const resizeEvent = new Event('resize');
@@ -289,5 +293,15 @@ function changeExperience(type){
     }
   }else{
     console.error("reached (what should be) unreachable code")
+  }
+}
+
+async function changeIMG(id, source){
+  let item = null
+  for(let i = 0; i<10 && !item; i++){
+    setTimeout(() => {
+      item.src = "/pictures/"+source
+    }, 100);
+    item = document.getElementById(id)
   }
 }
