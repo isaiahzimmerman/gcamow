@@ -1,7 +1,7 @@
 changePictures = [
     {
         id: "top_image_img",
-        src:"image0.jpeg",
+        src:"cooking.jpeg",
     },
     {
         id: "about_image",
