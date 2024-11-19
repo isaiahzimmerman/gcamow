@@ -1,13 +1,16 @@
-TODO: change form submission redirect
-
-done: Holy Trinity Lutheran Church
-
 TODO: manual
     * how to make an invoice
     * how to change images
-    * toggleable/popup for closing due to inclement weather
-        * also make the message editable.
-        * expires after a certain amount of time
     * change prices
 
-TODO: fix volunteer image
+TODO: make it so that the about image height is proportional to the text next to it's height
+* about_image_container shrinks after text's height is greater than its height
+
+red section with the hours on the left side and the non working holidays on the right side
+
+button to scroll images on hero image (not auto scroll?)
+
+driver at door or driver placing bag into cooler - 9th set of pictures for volunteer page
+* third set image3.jpeg, cooking food
+
+9:48

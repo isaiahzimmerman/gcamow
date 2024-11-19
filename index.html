@@ -15,6 +15,7 @@
     <script src="image_viewer.js"></script>
     <script src="/updates.js"></script>
     <script src="/changePictures.js"></script>
+    <script src="prices.js"></script>
     <script src="/assets/header.js"></script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
 </head>
@@ -70,7 +71,7 @@
         <div>Donate</div>
     </div> -->
     <div class="top_image" id="home">
-        <img src="/assets/image2.jpeg" id="top_image_img" alt="">
+        <img src="" id="top_image_img" alt="">
         <div class="business_title">
             <div class="business_title_gca">Grove City Area</div>
             <div class="business_title_mow">Meals on Wheels</div>
@@ -107,7 +108,7 @@
             <!-- About -->
         </div>
         <div class="site_body section_about">
-            <div>
+            <div class="about_text_container">
                 <p>
                     Grove City Area Meals on Wheels is a neighborhood service that delivers fresh, nutritious, and well-balanced meals directly to your home at a low cost.
                 </p>
@@ -119,7 +120,7 @@
                 </p>
             </div>
             <div class="about_image_container" >
-                <img src="/assets/image3.jpeg" class="fit_image" id="about_image" alt="">
+                <img src="" class="fit_image" id="about_image" alt="">
                 <!-- <div class="about_view_more_images" onclick="showImageViewer()"> -->
                 <!-- <div class="about_view_more_images">
                     view more images -->
@@ -143,13 +144,13 @@
                 Our meals are well balanced with healthy portions and have been approved by a dietician. There is a nice variety of meals since we use a 5-week menu rotation. Our volunteers deliver the meals to your home, Monday-Friday, except major holidays, between 11 AM & Noon. Our holidays include New Years Day, Memorial Day, 4th of July, Labor Day, Thanksgiving Day, Black Friday, and Christmas Day.
             </p>
             <p>
-                The cost of a hot meal is $4.00 a day which would consist of a protein, vegetable, potato, fruit, bread & butter and milk.
+                The cost of a hot meal is $<span id="meals_hot_meal"></span> a day which would consist of a protein, vegetable, potato, fruit, bread & butter and milk.
             </p>
             <p>
-                For $6.00 a day, you get a hot meal and a cold light supper. A sample cold meal includes a sandwich, salad and juice.
+                For $<span id="meals_both"></span> a day, you get a hot meal and a cold light supper. A sample cold meal includes a sandwich, salad and juice.
             </p>
             <p>
-                In the event that we would have to close due to severe weather conditions, notices will be posted on Facebook, and on television under Closings on Youngstown channels WFMJ (21), WKBN (27) and WYTV (33) and on Pittsburgh Channels KDKA (2) and WPXI (11)
+                In the event that we would have to close due to severe weather conditions etc., notices will be posted on Facebook, on this website and on television under Closings on Youngstown channels WFMJ (21), WKBN (27) and WYTV (33) and on Pittsburgh Channels KDKA (2) and WPXI (11)
             </p>
         </div>
         <div class="spacing"></div>
@@ -213,7 +214,7 @@
         </div>
         <div class="site_body donation_container">
             <div class="donation_description">
-                Grove City Area Meals on Wheels is not federally funded and depends on your support to help us keep meals affordable to people in our area who are unable to prepare meals for themselves. Thank you!
+                Grove City Area Meals on Wheels is not federally funded. We depend on your support to help us keep meals affordable to people in our area who are unable to prepare meals for themselves. Thank you!
             </div>
             <div class="donation_presets">
                 
@@ -251,7 +252,7 @@
                 <div class="testimonial_stack testimonial_stack_2"></div>
                 <div class="testimonial_stack testimonial_stack_1"></div>
                 <div class="testimonial_container">
-                    <div class="testimonial_message">“They [the volunteers] always have a smile and ask how I am”</div>
+                    <div class="testimonial_message">“They [the volunteers] always have a smile and ask how I am.”</div>
                     <div>
                         <!-- <div class="testimonial_image">
                             <img src="assets/holy_trinity.jpg" alt="">

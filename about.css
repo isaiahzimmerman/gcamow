@@ -1,7 +1,18 @@
 .about_image_container{
-    position: relative;
+    /* position: relative; */
     /* cursor: pointer; */
     /* TODO */
+    display: flex;
+    
+    /* aspect-ratio: 4/5; */
+    /* height: min(100%, 500px); */
+}
+
+.about_text_container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about_view_more_images{
@@ -23,6 +34,7 @@
 
 #about_image{
     min-height: 100%;
+    aspect-ratio: 1;
 }
 
 .mobile .about_view_more_images, .mobile #about_image{
@@ -34,3 +46,15 @@
     opacity: 1;
     TODO
 } */
+
+
+.desktop .section_about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.mobile .section_about{
+    display: flex;
+    flex-direction: column;
+}

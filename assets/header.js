@@ -131,7 +131,10 @@ function runOnLoad(){
 
   changePictures.forEach(element => {
     changeIMG(element.id, element.src)
-  });  
+  });
+
+  updateInnerHTML("meals_hot_meal", prices.hotMeal.toFixed(2))
+  updateInnerHTML("meals_both", (prices.hotMeal+prices.coldMeal).toFixed(2))
 
   replaceAddressBar(window.location.pathname)
 
@@ -164,6 +167,16 @@ function runOnLoad(){
   if(!siteWarningExpired()){
     siteWarning.innerHTML = updates.message
     siteWarningContainer.style.display = "flex"
+  }
+}
+
+async function updateInnerHTML(id, value){
+  let item = null
+  for(let i = 0; i<10 && !item; i++){
+    setTimeout(() => {
+      item.innerHTML = value
+    }, 100);
+    item = document.getElementById(id)
   }
 }
 

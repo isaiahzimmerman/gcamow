@@ -241,17 +241,6 @@ body.noScroll{
 }
 
 
-.desktop .section_about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.mobile .section_about{
-    display: flex;
-    flex-direction: column;
-}
-
 .fit_image {
     width: 100%;
     height: 100%;

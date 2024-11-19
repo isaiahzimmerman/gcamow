@@ -114,3 +114,9 @@
     width: 100%;
     aspect-ratio: 3/2;
 }
+
+.volunteering_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
