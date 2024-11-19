@@ -120,3 +120,20 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.volunteering_images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mobile .volunteering_images_img{
+    max-width: 46%;
+    margin: 2% auto;
+}
+
+.volunteering_images_img{
+    max-width: 32%;
+    aspect-ratio: 3/4;
+    max-height: 400px;
+}

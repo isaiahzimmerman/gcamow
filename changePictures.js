@@ -1,7 +1,7 @@
 changePictures = [
     {
         id: "top_image_img",
-        src:"cooking.jpeg",
+        src:"image0.jpeg",
     },
     {
         id: "about_image",
@@ -11,4 +11,16 @@ changePictures = [
         id: "volunteering_image",
         src: "image2.jpeg"
     },
+    {
+        id: "volunteering_images_1",
+        src: "driver.jpeg"
+    },
+    {
+        id: "volunteering_images_2",
+        src: "packer.jpeg"
+    },
+    {
+        id: "volunteering_images_3",
+        src: "cooking.jpeg"
+    }
 ]

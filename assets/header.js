@@ -133,8 +133,7 @@ function runOnLoad(){
     changeIMG(element.id, element.src)
   });
 
-  updateInnerHTML("meals_hot_meal", prices.hotMeal.toFixed(2))
-  updateInnerHTML("meals_both", (prices.hotMeal+prices.coldMeal).toFixed(2))
+  updatePrices()
 
   replaceAddressBar(window.location.pathname)
 
@@ -178,6 +177,11 @@ async function updateInnerHTML(id, value){
     }, 100);
     item = document.getElementById(id)
   }
+}
+
+async function updatePrices(){
+  updateInnerHTML("meals_hot_meal", prices.hotMeal.toFixed(2))
+  updateInnerHTML("meals_both", (prices.hotMeal+prices.coldMeal).toFixed(2))
 }
 
 function noRedirectA(){
