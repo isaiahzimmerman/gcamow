@@ -1,6 +1,6 @@
 prices = {
-    hotMeal: 4.20,
-    coldMeal: 2.10,
+    hotMeal: 4,
+    coldMeal: 2,
 }
 
 //both will be calculated using hot + cold

@@ -421,6 +421,13 @@ a:visited{
     position: fixed;
     bottom: 0;
     z-index: 3;
+    width: calc(100vw - 6rem);
+}
+
+.siteWarning{
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .warningSymbol{
