@@ -15,7 +15,7 @@ updates = {
         month: 12,
         day: 5,
         year: 2024,
-        hour: 12,
-        minute: 0,
+        hour: 23,
+        minute: 59,
     },
 }
