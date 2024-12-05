@@ -12,10 +12,10 @@ updates = {
     //     minute: 59,
     // },
     expires: {
-        month: 11,
-        day: 19,
+        month: 12,
+        day: 5,
         year: 2024,
-        hour: 23,
+        hour: 12,
         minute: 0,
     },
 }
