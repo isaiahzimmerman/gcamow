@@ -8,6 +8,7 @@
     transition: border-color 0.25s, background-color 0.25s, color 0.25s;
     border: 2px solid;
     margin: 5px;
+    text-align: center;
 }
 
 .primary_action_button{
