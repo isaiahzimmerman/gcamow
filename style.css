@@ -415,7 +415,7 @@ a:visited{
 .siteWarningContainer{
     text-align: center;
     padding: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: var(--theme-yellow);
     display: none;
     position: fixed;
