@@ -1,7 +1,7 @@
 updates = {
     //example
     //message: `Dear loyal customers, Grove City Area Meals on Wheels will be closed on Monday, 12/16/24 due to a bad weather. Thank you for your patience and flexibility.`,
-    message: `Dear loyal customers, we will be delivering on Tuesday, 12/31/24, but will only be sending a cold meal, until the sewer/water problem is fixed.  Hopefully, repairs can be done on Thursday night. We are closed on Wednesday, for New Years Day.  Thank you for your patience and flexibility. We will keep you updated.`,  
+    message: `Dear loyal customers, we are in need of a driver that can deliver on Tuesdays for a Grove City route.  Please call 724-458-5371, if you are interested.  Thank you. `,  
     //expires: 
     //     month: 12,
     //     day: 5,
@@ -10,9 +10,9 @@ updates = {
     //     minute: 59,
     // },
     expires: {
-        month: 12,
-        day: 31,
-        year: 2024,
+        month: 1,
+        day: 24,
+        year: 2025,
         hour: 23,
         minute: 59,
     },
