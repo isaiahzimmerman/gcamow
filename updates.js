@@ -11,7 +11,7 @@ updates = {
     // },
     expires: {
         month: 1,
-        day: 24,
+        day: 31,
         year: 2025,
         hour: 23,
         minute: 59,
