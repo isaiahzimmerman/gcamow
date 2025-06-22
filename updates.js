@@ -13,7 +13,7 @@ updates = {
         month: 6,
         day: 27,
         year: 2025,
-        hour:12,
-        minute: 0,
+        hour:11,
+        minute: 59,
     },
 }
