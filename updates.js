@@ -4,16 +4,16 @@ updates = {
     //example:
     //expires: {
     //     month: 6,
-    //     day: 21,
-    //     year:2025,
-    //     hour: 12,
-    //     minute:0,
+    //     day: 27,
+    //     year: 2025,
+    //     hour: 24,
+    //     minute: 0,
     // },
     expires: {
         month: 6,
         day: 27,
         year: 2025,
-        hour:11,
+        hour: 23,
         minute: 59,
     },
 }
