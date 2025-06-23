@@ -1,6 +1,6 @@
 updates = {
     //example: `We will be closed on February 20th due to severe weather.`,
-    message: `Please consider giving to the Grove City Area Meals on Wheels through PAOHGives between June 21-27.  Donations will go to the Community Foundation of Western PA and Eastern OH and matched.`, 
+    message: `Please consider giving to the Grove City Area Meals on Wheels through PAOHGives.org between June 21st & 27th.  Donations will go to the Community Foundation of Western PA and Eastern OH and matched.`, 
 
     //example:
     //expires: {
