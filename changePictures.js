@@ -21,6 +21,6 @@ changePictures = [
     },
     {
         id: "volunteering_images_3",
-        src: "cooking.jpeg"
+        src: "IMG_2093.jpg"
     }
 ]
