@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="donate.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="image_viewer.css">
+    <script src="image_scroller.js"></script>
     <script src="main.js"></script>
     <script src="image_viewer.js"></script>
     <script src="/updates.js"></script>
@@ -153,7 +154,22 @@
                 In the event that we would have to close due to severe weather conditions etc., notices will be posted on Facebook, on this website and on television under Closings on Youngstown channels WFMJ (21), WKBN (27) and WYTV (33) and on Pittsburgh channels KDKA (2) and WPXI (11).
             </p>
         </div>
-        <div class="spacing"></div>
+        <image-scroller speed="40" img-height="200" gap="12" style="width: 100%; overflow-x: hidden;">
+            <img src="/pictures/meal0.jpg" alt="">
+            <img src="/pictures/meal1.jpg" alt="">
+            <img src="/pictures/meal2.jpg" alt="">
+            <img src="/pictures/meal3.jpg" alt="">
+            <img src="/pictures/meal4.jpg" alt="">
+
+            <!-- duplicated for cushion -->
+            <img src="/pictures/meal0.jpg" alt="">
+            <img src="/pictures/meal1.jpg" alt="">
+            <img src="/pictures/meal2.jpg" alt="">
+            <img src="/pictures/meal3.jpg" alt="">
+            <img src="/pictures/meal4.jpg" alt="">
+        </image-scroller>
+        <!-- Note: use type="module" (modules are deferred automatically) -->
+        <script type="module" src="./image-scroller.js"></script>
         <div class="site_body section_heading center_text phone_number" id="contact">
             <div>
                 <a href="tel:+17244585371" class="hrefOn">724-458-5371</a>
@@ -268,9 +284,6 @@
                 <div class="testimonial_container">
                     <div class="testimonial_message">"The food is very good. I love the roast beef sandwiches and the lasagna."</div>
                     <div>
-                        <!-- <div class="testimonial_image">
-                            <img src="assets/holy_trinity.jpg" alt="">
-                        </div> -->
                         <div class="testimonial_person">- Ida L.</div>
                     </div>
                 </div>
