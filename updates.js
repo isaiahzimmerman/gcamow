@@ -1,6 +1,6 @@
 updates = {
     //example: `We will be closed on February 20th due to severe weather.`,
-    message: `Deaar loyal customers, we are closed today, Tuesday, 12/2/2025.  Due to severe weather.`,
+    message: `Dear loyal customers, we are closed today, Tuesday, 12/2/2025.  Due to severe weather.`,
     //example:
     //expires: {
     //     month: 6,
